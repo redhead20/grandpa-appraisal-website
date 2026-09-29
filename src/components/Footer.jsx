@@ -1,6 +1,7 @@
 import React from 'react';
 import { BUSINESS_INFO } from '../data/appraisalData';
 import { IconPhone, IconMail, IconMapPin, IconClock, IconShield } from './Icons';
+import { publicAsset } from '../assets';
 
 export default function Footer() {
   return (
@@ -8,10 +9,10 @@ export default function Footer() {
       {/* Photo strip above footer */}
       <div style={styles.photoStrip}>
         {[
-          '/images/pdf_p13_img1.jpeg',
-          '/images/Bear-Hollow-Cabin-1020x610.jpg',
-          '/images/OIP.jpg',
-          '/images/Row houses.jpg',
+          publicAsset('/images/pdf_p13_img1.jpeg'),
+          publicAsset('/images/Bear-Hollow-Cabin-1020x610.jpg'),
+          publicAsset('/images/OIP.jpg'),
+          publicAsset('/images/Row houses.jpg'),
         ].map((src, i) => (
           <div key={i} style={{ ...styles.stripPhoto, backgroundImage: `url(${src})` }} />
         ))}
@@ -23,7 +24,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div style={styles.logoBg}>
-              <img src="/images/pdf_p7_img1.png" alt="Thacker Appraisal Logo" style={styles.logoImg} />
+              <img src={publicAsset('/images/pdf_p7_img1.png')} alt="Thacker Appraisal Logo" style={styles.logoImg} />
             </div>
             <p style={styles.tagline}>
               Independent, USPAP-certified residential real estate appraisals across Metro Denver and surrounding Colorado counties.

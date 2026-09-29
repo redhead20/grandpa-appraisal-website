@@ -1,6 +1,7 @@
 import React from 'react';
 import { BUSINESS_INFO, ABOUT_TEXT } from '../data/appraisalData';
 import { IconAward, IconShield, IconCheck, IconMapPin, IconPhone, IconMail } from './Icons';
+import { publicAsset } from '../assets';
 
 export default function BioCredentials() {
   return (
@@ -13,7 +14,7 @@ export default function BioCredentials() {
             {/* Property photo banner */}
             <div style={styles.photoBanner}>
               <img
-                src="/images/pdf_p13_img1.jpeg"
+                src={publicAsset('/images/pdf_p13_img1.jpeg')}
                 alt="Colorado residential property appraisal"
                 style={styles.bannerImg}
               />
@@ -67,7 +68,7 @@ export default function BioCredentials() {
             {/* Logo white card */}
             <div className="glass-card" style={styles.logoCard}>
               <div style={styles.logoWhiteBg}>
-                <img src="/images/pdf_p7_img1.png" alt="Thacker Appraisal Logo" style={styles.logoImg} />
+                <img src={publicAsset('/images/pdf_p7_img1.png')} alt="Thacker Appraisal Logo" style={styles.logoImg} />
               </div>
               <div style={{ textAlign: 'center' }}>
                 <h3 style={{ fontSize: '1.35rem', marginBottom: '0.2rem' }}>{BUSINESS_INFO.appraiserName}</h3>

@@ -1,15 +1,16 @@
 import React from 'react';
 import { SERVICES, BUSINESS_INFO } from '../data/appraisalData';
 import { IconHome, IconShield, IconFileText, IconAward, IconCheck, IconPhone } from './Icons';
+import { publicAsset } from '../assets';
 
 const ICONS = { Home: IconHome, Shield: IconShield, FileText: IconFileText, Award: IconAward };
 
 // Map each service to a real property photo
 const SERVICE_PHOTOS = [
-  '/images/pdf_p13_img1.jpeg',          // Residential: Colorado suburban home
-  '/images/Home-Builder-Colorado-Springs.jpg', // FHA/Mortgage: new construction
-  '/images/Bear-Hollow-Cabin-1020x610.jpg',    // Estate: mountain cabin
-  '/images/OIP.jpg',                    // PMI/Reviews: colorful houses
+  publicAsset('/images/pdf_p13_img1.jpeg'),
+  publicAsset('/images/Home-Builder-Colorado-Springs.jpg'),
+  publicAsset('/images/Bear-Hollow-Cabin-1020x610.jpg'),
+  publicAsset('/images/OIP.jpg'),
 ];
 
 export default function Services() {

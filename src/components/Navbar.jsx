@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { BUSINESS_INFO } from '../data/appraisalData';
 import { IconPhone, IconMail, IconSun, IconMoon } from './Icons';
+import { publicAsset } from '../assets';
 
 export default function Navbar({ theme, toggleTheme }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -33,7 +34,7 @@ export default function Navbar({ theme, toggleTheme }) {
         {/* Logo */}
         <a href="#" style={styles.brand}>
           <img
-            src="/images/pdf_p7_img1.png"
+            src={publicAsset('/images/pdf_p7_img1.png')}
             alt="Thacker Appraisal Services Inc. Logo"
             style={styles.logoImg}
           />

@@ -1,6 +1,7 @@
 import React from 'react';
 import { BUSINESS_INFO } from '../data/appraisalData';
 import { IconShield, IconPhone, IconMail, IconCheck } from './Icons';
+import { publicAsset } from '../assets';
 
 export default function Hero() {
   return (
@@ -63,7 +64,7 @@ export default function Hero() {
           <div className="glass-card" style={styles.credCard}>
             {/* Logo inside card */}
             <div style={styles.cardLogoWrap}>
-              <img src="/images/pdf_p7_img1.png" alt="Thacker Appraisal Logo" style={styles.cardLogo} />
+              <img src={publicAsset('/images/pdf_p7_img1.png')} alt="Thacker Appraisal Logo" style={styles.cardLogo} />
             </div>
 
             <div style={styles.divider} />
@@ -108,7 +109,7 @@ const styles = {
   heroSection: { position: 'relative', minHeight: '88vh', display: 'flex', alignItems: 'center', padding: '5rem 0' },
   heroBg: {
     position: 'absolute', inset: 0,
-    backgroundImage: 'url(/images/Bear-Hollow-Cabin-1020x610.jpg)',
+    backgroundImage: `url(${publicAsset('/images/Bear-Hollow-Cabin-1020x610.jpg')})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center 40%',
     zIndex: 0,
